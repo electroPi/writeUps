@@ -1,0 +1,65 @@
+\begin{verbatim}
+
+
+[+] URL: http://192.168.56.102/wordpress/ [192.168.56.102]
+[+] Started: Thu Mar 28 19:02:25 2024
+
+Interesting Finding(s):
+
+[+] Headers
+ | Interesting Entry: Server: Apache/2.4.38 (Debian)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[+] XML-RPC seems to be enabled: http://192.168.56.102/wordpress/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner/
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login/
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access/
+
+[+] WordPress readme found: http://192.168.56.102/wordpress/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] Upload directory has listing enabled: http://192.168.56.102/wordpress/wp-content/uploads/
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[+] The external WP-Cron seems to be enabled: http://192.168.56.102/wordpress/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[+] WordPress version 5.8 identified (Insecure, released on 2021-07-20).
+ | Found By: Emoji Settings (Passive Detection)
+ |  - http://192.168.56.102/wordpress/, Match: 'wp-includes\/js\/wp-emoji-release.min.js?ver=5.8'
+ | Confirmed By: Meta Generator (Passive Detection)
+ |  - http://192.168.56.102/wordpress/, Match: 'WordPress 5.8'
+
+[i] The main theme could not be detected.
+
+
+[i] No plugins Found.
+
+
+[i] No Config Backups Found.
+
+[!] No WPScan API Token given, as a result vulnerability data has not been output.
+[!] You can get a free API token with 25 daily requests by registering at https://wpscan.com/register
+
+[+] Finished: Thu Mar 28 19:02:27 2024
+[+] Requests Done: 164
+[+] Cached Requests: 4
+[+] Data Sent: 44.853 KB
+[+] Data Received: 92.996 KB
+[+] Memory used: 228.496 MB
+[+] Elapsed time: 00:00:01
+
+
+\end{verbatim}
